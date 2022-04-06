@@ -1,0 +1,20 @@
+{
+    "name": "drupal/site",
+    "description": "A sample website using custom Drupal",
+    "type": "project",
+    "authors": [
+        {
+            "name": "vpradeep",
+            "email": "vpradeep@athenahealth.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "git@github.com:venugopp/custom_d9.git"
+        }
+    ],
+    "require": {
+        "custom_d9/custom_d9": "main"
+    }
+}
