@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "drupal/legacy-project": "1.0"
+        "custom/drupal": "dev-main"
     },
     "config": {
         "sort-packages": true,
