@@ -73,6 +73,11 @@
         },
         "symlinks": {
             "modules/site": "web/modules/custom/site"
+        },
+        "patches": {
+            "drupal/core": {
+                "#3174760: Mails resembling HTML are corrupted": "https://www.drupal.org/files/issues/2021-08-06/3174760-38.patch"
+            }
         }
     },
     "scripts": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31d99f5a683e91804891429c2b690b70",
+    "content-hash": "5ee72d93ca1b518fca2f5d1cf4a0c0b7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -909,16 +909,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/venugopp/custom_d9.git",
-                "reference": "d5531f7e584d2815b4c19b1811ec7782460bbd5f"
+                "reference": "cd5c93766f631d9c64a5c3345f08d7689ef10d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/venugopp/custom_d9/zipball/d5531f7e584d2815b4c19b1811ec7782460bbd5f",
-                "reference": "d5531f7e584d2815b4c19b1811ec7782460bbd5f",
+                "url": "https://api.github.com/repos/venugopp/custom_d9/zipball/cd5c93766f631d9c64a5c3345f08d7689ef10d5e",
+                "reference": "cd5c93766f631d9c64a5c3345f08d7689ef10d5e",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.9",
+                "cweagans/composer-patches": "^1.7",
                 "drupal/admin_toolbar": "^2.5",
                 "drupal/core-composer-scaffold": "^9.3",
                 "drupal/core-project-message": "^9.3",
@@ -967,26 +968,10 @@
                         "type:drupal-custom-theme"
                     ]
                 },
-                "drupal-core-project-message": {
-                    "include-keys": [
-                        "homepage",
-                        "support"
-                    ],
-                    "post-create-project-cmd-message": [
-                        "<bg=blue;fg=white>                                                         </>",
-                        "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                        "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
-                        "<bg=blue;fg=white>                                                         </>",
-                        "",
-                        "<bg=yellow;fg=black>Next steps</>:",
-                        "  * Install the site: https://www.drupal.org/docs/8/install",
-                        "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                        "  * Get support: https://www.drupal.org/support",
-                        "  * Get involved with the Drupal community:",
-                        "      https://www.drupal.org/getting-involved",
-                        "  * Remove the plugin that prints this message:",
-                        "      composer remove drupal/core-project-message"
-                    ]
+                "patches": {
+                    "drupal/core": {
+                        "#3270378: Promote non-stable modules to the top of the list": "https://www.drupal.org/files/issues/2022-04-18/3270378-8.patch"
+                    }
                 }
             },
             "license": [
@@ -999,7 +984,7 @@
                 "source": "https://github.com/venugopp/custom_d9/tree/main",
                 "issues": "https://github.com/venugopp/custom_d9/issues"
             },
-            "time": "2022-04-16T10:08:16+00:00"
+            "time": "2022-04-20T10:31:33+00:00"
         },
         {
             "name": "custom_modules/all",
@@ -1023,6 +1008,54 @@
                 "issues": "https://github.com/venugopp/custom_modules/issues"
             },
             "time": "2022-04-18T16:21:54+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e9969cfc0796e6dea9b4e52f77f18e1065212871",
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.2"
+            },
+            "time": "2022-01-25T19:21:20+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
