@@ -25,6 +25,8 @@
     "require": {
         "custom/drupal": "dev-main",
         "custom_modules/all": "dev-main",
+        "drupal/config_ignore": "^2.3",
+        "drupal/config_split": "^1.8",
         "kporras07/composer-symlinks": "^1.1"
     },
     "config": {
